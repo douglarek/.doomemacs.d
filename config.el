@@ -90,3 +90,7 @@
   (add-hook 'before-save-hook #'lsp-organize-imports))
 (after! doom-themes
   (setq doom-themes-enable-bold nil))
+(map! :after go-mode
+      :map go-mode-map
+      :localleader
+      "f" #'go-fill-struct)
